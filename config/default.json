@@ -1,0 +1,12 @@
+{
+    "server": {
+        "port": 3000
+    },
+    "ghtoken":"072a8daf8c75c9551a586e4d60905cfde0e01d69",
+    "data_dir": "/usr/local/koop/",
+    "db": {
+        "postgis": {
+            "conn": "postgres://localhost/koopdev"
+        }
+    }
+}

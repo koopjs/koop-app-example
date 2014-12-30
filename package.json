@@ -1,0 +1,21 @@
+{
+  "name": "koop-sample-app",
+  "version": "1.0.0",
+  "description": "A sample application that shows how to create an app using koop ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Chris Helm",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.9.0",
+    "koop-ckan": "0.0.1",
+    "koop-climate": "0.0.1",
+    "koop-cloudant": "0.0.2",
+    "koop-gist": "^0.0.1",
+    "koop-github": "^0.1.2",
+    "koop-socrata": "0.0.1"
+  }
+}
