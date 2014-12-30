@@ -23,6 +23,10 @@ var app = express();
 // add koop middleware
 app.use( koop );
 
+app.get('/status', function(req, res){
+  res.json( koop.status );
+});
+
 app.listen(process.env.PORT || config.server.port,  function() {
   console.log("Listening at http://%s:%d/", this.address().address, this.address().port);
 });
