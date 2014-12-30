@@ -16,6 +16,7 @@
   "dependencies": {
     "config": "~1.9.0",
     "express": "^4.10.6",
+    "koop": "~1.0.0",
     "koop-agol": "^0.1.14",
     "koop-ckan": "~0.0.1",
     "koop-climate": "~0.0.1",
