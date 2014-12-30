@@ -9,13 +9,19 @@
   },
   "author": "Chris Helm",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:chelm/koop-sample-app.git"
+  },
   "dependencies": {
-    "config": "^1.9.0",
-    "koop-ckan": "0.0.1",
-    "koop-climate": "0.0.1",
-    "koop-cloudant": "0.0.2",
-    "koop-gist": "^0.0.1",
-    "koop-github": "^0.1.2",
-    "koop-socrata": "0.0.1"
+    "config": "~1.9.0",
+    "express": "^4.10.6",
+    "koop-agol": "^0.1.14",
+    "koop-ckan": "~0.0.1",
+    "koop-climate": "~0.0.1",
+    "koop-cloudant": "~0.0.2",
+    "koop-gist": "~0.0.1",
+    "koop-github": "~0.1.2",
+    "koop-socrata": "~0.0.1"
   }
 }

@@ -7,6 +7,7 @@ var express = require("express"),
   socrata = require('koop-socrata'),
   ckan = require('koop-ckan'),
   github = require('koop-github'),
+  agol = require('koop-agol'),
   gist = require('koop-gist');
 
 //register providers with koop 
@@ -14,6 +15,7 @@ koop.register( socrata );
 koop.register( ckan ); 
 koop.register( github ); 
 koop.register( gist ); 
+koop.register( agol ); 
 
 // create an express app
 var app = express();
