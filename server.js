@@ -27,6 +27,13 @@ app.get('/status', function(req, res){
   res.json( koop.status );
 });
 
+app.set('view engine', 'ejs');
+
+// serve the index
+app.get("/", function(req, res, next) {
+  res.render(__dirname + '/views/index');
+});
+
 app.listen(process.env.PORT || config.server.port,  function() {
   console.log("Listening at http://%s:%d/", this.address().address, this.address().port);
 });
