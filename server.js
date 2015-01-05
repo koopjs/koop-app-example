@@ -20,7 +20,7 @@ koop.register( agol );
 
 // create an express app
 var app = express();
-app.use( cors );
+app.use( cors() );
 
 app.use(function(req,res,next){
   var oldEnd = res.end;
