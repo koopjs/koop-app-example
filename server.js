@@ -2,6 +2,7 @@
 "use strict";
 
 var express = require("express"),
+  cors = require('cors'),
   config = require("config"),
   koop = require('koop')( config ),
   socrata = require('koop-socrata'),
@@ -19,6 +20,18 @@ koop.register( agol );
 
 // create an express app
 var app = express();
+app.use( cors );
+
+app.use(function(req,res,next){
+  var oldEnd = res.end;
+
+  res.end = function() {
+    console.log(req.path, res.statusCode);
+    oldEnd.apply(res, arguments);
+  };
+
+  next();
+});
 
 // add koop middleware
 app.use( koop );
