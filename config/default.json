@@ -7,5 +7,14 @@
         "postgis": {
             "conn": "postgres://localhost/koopdev"
         }
+    },
+    "agol":{
+      "request_workers": {
+        "redis": {
+          "prefix":"q",
+          "port":6379,
+          "host":"127.0.0.1"
+        }
+      }
     }
 }

@@ -6,6 +6,7 @@ var express = require("express"),
   config = require("config"),
   koop = require('koop')( config ),
   socrata = require('koop-socrata'),
+  acs = require('koop-acs'),
   ckan = require('koop-ckan'),
   github = require('koop-github'),
   agol = require('koop-agol'),
@@ -16,6 +17,7 @@ koop.register( socrata );
 koop.register( ckan ); 
 koop.register( github ); 
 koop.register( gist ); 
+koop.register( acs ); 
 koop.register( agol ); 
 
 // create an express app
