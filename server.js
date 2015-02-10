@@ -58,3 +58,8 @@ app.listen(process.env.PORT || config.server.port,  function() {
   console.log("Listening at http://%s:%d/", this.address().address, this.address().port);
 });
 
+// Catch all errors
+process.on("uncaughtException", function(err){
+  var msg = "Uncaught Error: "+ err;
+  koop.log.error( msg );
+});

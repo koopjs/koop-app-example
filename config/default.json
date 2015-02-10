@@ -4,8 +4,27 @@
     },
     "data_dir": "/usr/local/koop/",
     "db": {
-        "postgis": {
-            "conn": "postgres://localhost/koopdev"
+      "postgis":{
+      "conn": "postgres://localhost/koopdev"
+      }
+    },
+    "s3":{
+      "bucket": "chelm-koop-shoot-local"
+    },
+    "export_workers":{
+      "redis": {
+        "prefix":"export-q",
+        "port":6379,
+        "host":"127.0.0.1"
+      }
+    },
+    "agol":{
+      "request_workers": {
+        "redis": {
+          "prefix":"q",
+          "port":6379,
+          "host":"127.0.0.1"
         }
+      }
     }
 }
