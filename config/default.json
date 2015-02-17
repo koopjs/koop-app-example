@@ -4,9 +4,7 @@
     },
     "data_dir": "/usr/local/koop/",
     "db": {
-      "postgis":{
       "conn": "postgres://localhost/koopdev"
-      }
     },
     "s3":{
       "bucket": "chelm-koop-shoot-local"

@@ -10,12 +10,12 @@ var express = require("express"),
   ckan = require('koop-ckan'),
   github = require('koop-github'),
   agol = require('koop-agol'),
-  gist = require('koop-gist');
-//  pgCache = require('koop-pgcache');
+  gist = require('koop-gist'),
+  pgCache = require('koop-pgcache');
 
 // first we want to register our cache engine, postgis
 // this is not required but is helpful
-//koop.registerCache( pgCache );
+koop.registerCache( pgCache );
 
 //register providers with koop 
 koop.register( socrata ); 
@@ -31,6 +31,8 @@ app.use( cors() );
 
 app.use(function(req,res,next){
   var oldEnd = res.end;
+
+  console.log(req.path, res.body, req.query, req.params );
 
   res.end = function() {
     console.log(req.path, res.statusCode);
@@ -59,7 +61,7 @@ app.listen(process.env.PORT || config.server.port,  function() {
 });
 
 // Catch all errors
-process.on("uncaughtException", function(err){
-  var msg = "Uncaught Error: "+ err;
-  koop.log.error( msg );
-});
+//process.on("uncaughtException", function(err){
+//  var msg = "Uncaught Error: "+ err;
+//  koop.log.error( msg );
+//});

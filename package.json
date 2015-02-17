@@ -1,6 +1,6 @@
 {
   "name": "koop-sample-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A sample application that shows how to create an app using koop ",
   "main": "server.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "koop-cloudant": "~0.0.2",
     "koop-gist": "~0.0.1",
     "koop-github": "~0.1.2",
-    "koop-socrata": "~0.0.1"
+    "koop-socrata": "~0.0.1",
+    "koop-pgcache": "~0.0.1"
   }
 }
