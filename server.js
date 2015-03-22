@@ -11,7 +11,9 @@ var express = require("express"),
   github = require('koop-github'),
   agol = require('koop-agol'),
   gist = require('koop-gist'),
-  pgCache = require('koop-pgcache');
+  osm = require('koop-osm'),
+  pgCache = require('koop-pgcache'),
+  tiles = require('koop-tile-plugin');
 
 // first we want to register our cache engine, postgis
 // this is not required but is helpful
@@ -24,6 +26,10 @@ koop.register( github );
 koop.register( gist ); 
 koop.register( acs ); 
 koop.register( agol ); 
+koop.register( osm ); 
+
+// register the tiles plugin
+koop.register( tiles ); 
 
 // create an express app
 var app = express();
@@ -42,6 +48,11 @@ app.use(function(req,res,next){
   next();
 });
 
+app.use(function (req, res, next) {
+  res.removeHeader("Vary");
+  next();
+});
+
 // add koop middleware
 app.use( koop );
 
@@ -49,7 +60,7 @@ app.get('/status', function(req, res){
   res.json( koop.status );
 });
 
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 
 // serve the index
 app.get("/", function(req, res, next) {
