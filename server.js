@@ -6,14 +6,11 @@ var express = require("express"),
   config = require("config"),
   koop = require('koop')( config ),
   socrata = require('koop-socrata'),
-  acs = require('koop-acs'),
   ckan = require('koop-ckan'),
   github = require('koop-github'),
   agol = require('koop-agol'),
   gist = require('koop-gist'),
-  osm = require('koop-osm'),
-  pgCache = require('koop-pgcache'),
-  tiles = require('koop-tile-plugin');
+  pgCache = require('koop-pgcache');
 
 // first we want to register our cache engine, postgis
 // this is not required but is helpful
@@ -24,12 +21,7 @@ koop.register( socrata );
 koop.register( ckan ); 
 koop.register( github ); 
 koop.register( gist ); 
-koop.register( acs ); 
 koop.register( agol ); 
-koop.register( osm ); 
-
-// register the tiles plugin
-koop.register( tiles ); 
 
 // create an express app
 var app = express();
@@ -60,11 +52,11 @@ app.get('/status', function(req, res){
   res.json( koop.status );
 });
 
-//app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 // serve the index
 app.get("/", function(req, res, next) {
-  res.render(__dirname + '/views/index');
+  res.send('Koop Sample App!');
 });
 
 app.listen(process.env.PORT || config.server.port,  function() {
