@@ -1,29 +1,31 @@
 # Koop-Sample-App
-
-*koop-sample-app* is a sample express.js application that shows you how to deploy an instance of koop together with some koop providers.
+a sample express application intended to show how to deploy an instance of koop together with some koop providers.
 
 This app makes it easy to test out koop functionality, as well as to add additional koop providers for testing or deployment.
 
-Windows/Mac Prerequisites:
-- Node - 64 or 32 bit
-- Git (ideally)
-- PostgreSQL + PostGIS - simple install from EnterpriseDB is fine. If you get any warnings during install, add your PostgreSQL\bin folder to your PATH
+If you're new to node development, you can find more information about setting up a development environment [here](docs/SET_UP.md)
 
-This install has been roughly tested on:
-- OS X
-- Windows Server 2008R2
-- Windows Server 2012R2
-- Windows 8.1
-- Windows 7
+##Instructions
 
-Install on Windows/Mac:
+1. copy down the repository to your own machine
 ```
 git clone https://github.com/koopjs/koop-sample-app
+```
+2. navigate into your new folder
+```
 cd koop-sample-app
+```
+3. install koop's dependencies
+```
 npm install
 ```
-update config\default.json to reference your local postgres database (if named other than koopdev), you may need to specify a syntax like ```postgres://user:pw@localhost/koopdev```
+4. take koop for a test drive
+```
+node server.js
+```
+5. you can try fetching a resource directly in the browser to confirm koop is running
+[http://localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)
 
-Then run 
-```node server.js```
-and navigate to http://localhost:1337 to see the sample app.
+##Additional documentation
+* [Configuring a persistent PostGIS cache](docs/PG_CACHE.md)
+* [Deploying to Heroku](docs/DEPLOY_TO_HEROKU.md)

@@ -10,18 +10,16 @@ var express = require("express"),
   github = require('koop-github'),
   agol = require('koop-agol'),
   gist = require('koop-gist'),
-  pgCache = require('koop-pgcache');
+// in production you'll need to register our cache engine with postgis
+//   pgCache = require('koop-pgcache');
+// koop.registerCache( pgCache );
 
-// first we want to register our cache engine, postgis
-// this is not required but is helpful
-koop.registerCache( pgCache );
-
-//register providers with koop 
-koop.register( socrata ); 
-koop.register( ckan ); 
-koop.register( github ); 
-koop.register( gist ); 
-koop.register( agol ); 
+//register providers with koop
+koop.register( socrata );
+koop.register( ckan );
+koop.register( github );
+koop.register( gist );
+koop.register( agol );
 
 // create an express app
 var app = express();
