@@ -9,7 +9,7 @@ var express = require("express"),
   ckan = require('koop-ckan'),
   github = require('koop-github'),
   agol = require('koop-agol'),
-  gist = require('koop-gist'),
+  gist = require('koop-gist');
 // in production you'll need to register our cache engine with postgis
 //   pgCache = require('koop-pgcache');
 // koop.registerCache( pgCache );
