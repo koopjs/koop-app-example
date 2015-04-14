@@ -1,0 +1,7 @@
+{
+  "name": "Koop Sample App",
+  "description": "boilerplate Koop app suitable for deployment to Heroku",
+  "repository": "https://github.com/koopjs/koop-sample-app",
+  "logo": "https://avatars1.githubusercontent.com/u/11509517",
+  "keywords": ["node", "express", "static"]
+}

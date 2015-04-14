@@ -5,7 +5,7 @@ This app makes it easy to test out koop functionality, as well as to add additio
 
 If you're new to node development, you can find more information about setting up a development environment [here](docs/SET_UP.md)
 
-##Instructions
+## Instructions
 
 1. copy down the repository to your own machine
 ```
