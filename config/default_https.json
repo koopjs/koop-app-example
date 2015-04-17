@@ -1,0 +1,16 @@
+{
+    "server": {
+        "port": 1337
+    },
+	
+	"https_server": {
+		"port": 1443,
+		"private_key" : "cert/private.pem",
+		"public_key" : "cert/public.pem"
+	 },	
+
+    "data_dir": "/usr/local/koop/",
+    "db": {
+      "conn": "postgres://localhost/koopdev"
+    }
+}
