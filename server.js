@@ -21,6 +21,19 @@ koop.register( github );
 koop.register( gist );
 koop.register( agol );
 
+// require HTTPS if configured
+if (config.https_server){
+	var https = require('https');
+	var fs = require('fs');
+	var options = {
+		key: fs.readFileSync(config.https_server.private_key),
+		cert: fs.readFileSync(config.https_server.public_key)
+		};
+	}
+
+// require HTTP
+var http = require('http');
+
 // create an express app
 var app = express();
 app.use( cors() );
@@ -57,9 +70,15 @@ app.get("/", function(req, res, next) {
   res.send('Koop Sample App!');
 });
 
-app.listen(process.env.PORT || config.server.port,  function() {
-  console.log("Listening at http://%s:%d/", this.address().address, this.address().port);
-});
+//serve content
+if (config.https_server){
+  https.createServer(options, app).listen(config.https_server.port);
+  console.log("Listening at https://:%d/", config.https_server.port);
+}
+
+http.createServer(app).listen(config.server.port);
+console.log("Listening at http://:%d/", config.server.port);
+
 
 // Catch all errors
 //process.on("uncaughtException", function(err){
