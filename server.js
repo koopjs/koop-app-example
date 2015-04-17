@@ -23,13 +23,13 @@ koop.register( agol );
 
 // require HTTPS if configured
 if (config.https_server){
-	var https = require('https');
-	var fs = require('fs');
-	var options = {
-		key: fs.readFileSync(config.https_server.private_key),
-		cert: fs.readFileSync(config.https_server.public_key)
-		};
-	}
+  var https = require('https');
+  var fs = require('fs');
+  var options = {
+    key: fs.readFileSync(config.https_server.private_key),
+    cert: fs.readFileSync(config.https_server.public_key)
+	};
+  }
 
 // require HTTP
 var http = require('http');
