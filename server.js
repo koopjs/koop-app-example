@@ -76,7 +76,7 @@ if (config.https_server){
   console.log("Listening at https://:%d/", config.https_server.port);
 }
 
-http.createServer(app).listen(config.server.port);
+http.createServer(app).listen(process.env.PORT || config.server.port);
 console.log("Listening at http://:%d/", config.server.port);
 
 
