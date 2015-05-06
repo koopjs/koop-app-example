@@ -1,87 +1,65 @@
-#!/usr/bin/env node
-"use strict";
+var express = require('express');
+var cors = require('cors');
+var config = require('config');
+var koop = require('koop')(config);
+var socrata = require('koop-socrata');
+var ckan = require('koop-ckan');
+var github = require('koop-github');
+var agol = require('koop-agol');
+var gist = require('koop-gist');
+var path = require('path');
+var app = express();
+var server;
 
-var express = require("express"),
-  cors = require('cors'),
-  config = require("config"),
-  koop = require('koop')( config ),
-  socrata = require('koop-socrata'),
-  ckan = require('koop-ckan'),
-  github = require('koop-github'),
-  agol = require('koop-agol'),
-  gist = require('koop-gist');
-// in production you'll need to register our cache engine with postgis
-//   pgCache = require('koop-pgcache');
-// koop.registerCache( pgCache );
+// In production, in-memory cache storage is not recommended.
+// We recommend using PostGIS as the cache engine.
+// var pgCache = require('koop-pgcache');
+// koop.registerCache(pgCache);
 
-//register providers with koop
-koop.register( socrata );
-koop.register( ckan );
-koop.register( github );
-koop.register( gist );
-koop.register( agol );
-
-// require HTTPS if configured
-if (config.https_server){
+// use HTTPS if it's included in the configuration
+if (config.https_server &&
+    config.https_server.private_key &&
+    config.https_server.public_key) {
   var https = require('https');
   var fs = require('fs');
   var options = {
     key: fs.readFileSync(config.https_server.private_key),
     cert: fs.readFileSync(config.https_server.public_key)
-	};
-  }
-
-// require HTTP
-var http = require('http');
-
-// create an express app
-var app = express();
-app.use( cors() );
-
-app.use(function(req,res,next){
-  var oldEnd = res.end;
-
-  console.log(req.path, res.body, req.query, req.params );
-
-  res.end = function() {
-    console.log(req.path, res.statusCode);
-    oldEnd.apply(res, arguments);
   };
-
-  next();
-});
-
-app.use(function (req, res, next) {
-  res.removeHeader("Vary");
-  next();
-});
-
-// add koop middleware
-app.use( koop );
-
-app.get('/status', function(req, res){
-  res.json( koop.status );
-});
-
-app.set('view engine', 'ejs');
-
-// serve the index
-app.get("/", function(req, res, next) {
-  res.send('Koop Sample App!');
-});
-
-//serve content
-if (config.https_server){
-  https.createServer(options, app).listen(config.https_server.port);
-  console.log("Listening at https://:%d/", config.https_server.port);
+} else {
+  // use http module by default
+  var http = require('http');
 }
 
-http.createServer(app).listen(process.env.PORT || config.server.port);
-console.log("Listening at http://:%d/", config.server.port);
+// register koop providers
+koop.register(socrata);
+koop.register(ckan);
+koop.register(github);
+koop.register(gist);
+koop.register(agol);
 
+app.set('port', process.env.PORT || config.server.port || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-// Catch all errors
-//process.on("uncaughtException", function(err){
-//  var msg = "Uncaught Error: "+ err;
-//  koop.log.error( msg );
-//});
+app.use(cors()); // add CORS support (recommended)
+app.use(koop); // add koop middleware
+
+app.get('/status', function (req, res) {
+  res.json(koop.status);
+});
+
+app.get('/', function (req, res) {
+  res.render('index', { status: koop.status });
+});
+
+if (config.https_server) {
+  server = https.createServer(options, app);
+} else {
+  server = http.createServer(app);
+}
+
+// start the server
+server.listen(app.get('port'), function () {
+  console.log('Express koop server listening on port ' + app.get('port'));
+})
