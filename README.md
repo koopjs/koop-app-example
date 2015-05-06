@@ -11,7 +11,7 @@ If you're new to [node](https://nodejs.org/) development, you can find more info
 1. Clone this repository on your machine.
 
   ```
-  git clone git@github.com:ngoldman/koop-sample-app.git
+  git clone git@github.com:koopjs/koop-sample-app.git
   ```
 
 2. Change the working directory to the newly created `koop-sample-app` folder.
@@ -33,7 +33,7 @@ If you're new to [node](https://nodejs.org/) development, you can find more info
   ```
 
 5. Take koop for a test drive!
-  You can try fetching a resource directly in the browser (such as http://localhost:1337/github/benbalter/dc-wifi-social/bars/) to confirm koop is running.
+  You can try fetching a resource directly in the browser (such as [localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)) to confirm koop is running.
 
 ## Additional documentation
 
