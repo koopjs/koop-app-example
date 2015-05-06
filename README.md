@@ -1,31 +1,41 @@
-# Koop-Sample-App
-a sample express application intended to show how to deploy an instance of koop together with some koop providers.
+# Koop Sample App
 
-This app makes it easy to test out koop functionality, as well as to add additional koop providers for testing or deployment.
+A sample [koop](https://github.com/esri/koop) express application with some common [koop providers](https://github.com/Esri/koop/wiki/Koop-Providers-(an-ecosystem)).
 
-If you're new to node development, you can find more information about setting up a development environment [here](docs/SET_UP.md)
+This app makes it easy to get started running your own instance of koop. It's also useful for trying out koop's functionality, trying new koop providers, and testing deployments.
+
+If you're new to [node](https://nodejs.org/) development, you can find more information about setting up a development environment [here](docs/SET_UP.md).
 
 ## Instructions
 
-1. copy down the repository to your own machine
-```
-git clone https://github.com/koopjs/koop-sample-app
-```
-2. navigate into your new folder
-```
-cd koop-sample-app
-```
-3. install koop's dependencies
-```
-npm install
-```
-4. take koop for a test drive
-```
-node server.js
-```
-5. you can try fetching a resource directly in the browser to confirm koop is running
-[http://localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)
+1. Clone this repository on your machine.
 
-##Additional documentation
+  ```
+  git clone git@github.com:ngoldman/koop-sample-app.git
+  ```
+
+2. Change the working directory to the newly created `koop-sample-app` folder.
+
+  ```
+  cd koop-sample-app
+  ```
+
+3. Install koop's dependencies.
+
+  ```
+  npm install
+  ```
+
+4. Start the server.
+
+  ```
+  npm start
+  ```
+
+5. Take koop for a test drive!
+  You can try fetching a resource directly in the browser (such as http://localhost:1337/github/benbalter/dc-wifi-social/bars/) to confirm koop is running.
+
+## Additional documentation
+
 * [Configuring a persistent PostGIS cache](docs/PG_CACHE.md)
 * [Deploying to Heroku](docs/DEPLOY_TO_HEROKU.md)
