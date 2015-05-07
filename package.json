@@ -1,31 +1,47 @@
 {
   "name": "koop-sample-app",
+  "description": "A sample koop express application with some common koop providers.",
   "version": "1.0.3",
-  "description": "A sample application that shows how to create an app using koop ",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
   "author": "Chris Helm",
+  "bugs": {
+    "url": "https://github.com/koopjs/koop-sample-app/issues"
+  },
+  "dependencies": {
+    "config": "^1.13.0",
+    "cors": "^2.5.3",
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "koop": "^2.0.1",
+    "koop-agol": "^0.2.0",
+    "koop-ckan": "^0.0.8",
+    "koop-climate": "^0.0.2",
+    "koop-cloudant": "^0.0.3",
+    "koop-gist": "^0.0.2",
+    "koop-github": "^0.1.12",
+    "koop-pgcache": "^0.1.0",
+    "koop-socrata": "^0.1.1"
+  },
+  "homepage": "https://github.com/koopjs/koop-sample-app",
+  "keywords": [
+    "agol",
+    "arcgis",
+    "etl",
+    "example",
+    "geojson",
+    "gis",
+    "heroku",
+    "koop",
+    "sample"
+  ],
   "license": "ISC",
+  "main": "server.js",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com:koopjs/koop-sample-app.git"
   },
-  "dependencies": {
-    "config": "~1.12.0",
-    "cors": "^2.5.3",
-    "ejs": "^2.3.1",
-    "express": "4.12.3",
-    "koop": "^2.0.1",
-    "koop-agol": "^0.1.61",
-    "koop-ckan": "~0.0.8",
-    "koop-climate": "~0.0.2",
-    "koop-cloudant": "~0.0.3",
-    "koop-gist": "~0.0.2",
-    "koop-github": "~0.1.12",
-    "koop-socrata": "~0.0.9",
-    "koop-pgcache": "~0.0.1"
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
