@@ -19,7 +19,7 @@
     "koop-gist": "^0.0.2",
     "koop-github": "^0.1.12",
     "koop-pgcache": "^0.1.0",
-    "koop-socrata": "^0.1.1"
+    "koop-socrata": "^0.1.2"
   },
   "homepage": "https://github.com/koopjs/koop-sample-app",
   "keywords": [
