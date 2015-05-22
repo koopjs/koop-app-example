@@ -1,10 +1,10 @@
 # Koop Sample App
 
-A sample [koop](https://github.com/esri/koop) express application with some common [koop providers](https://github.com/Esri/koop/wiki/Koop-Providers-(an-ecosystem)).
+A sample [Koop](https://github.com/esri/koop) express application with some common [koop providers](https://github.com/koopjs/koopjs.github.io/blob/master/doc/providers.md).
 
-This app makes it easy to get started running your own instance of koop. It's also useful for trying out koop's functionality, trying new koop providers, and testing deployments.
+This app makes it easy to get started running your own instance of Koop. It's also useful for trying out Koop's functionality, trying new Koop Providers, and testing deployments.
 
-If you're new to [node](https://nodejs.org/) development, you can find more information about setting up a development environment [here](docs/SET_UP.md).
+If you're new to [Node.js](https://nodejs.org/) development, you can read more about setting up a development environment [here](https://github.com/koopjs/koopjs.github.io/blob/master/doc/setup.md).
 
 ## Instructions
 
@@ -35,7 +35,10 @@ If you're new to [node](https://nodejs.org/) development, you can find more info
 5. Take koop for a test drive!
   You can try fetching a resource directly in the browser (such as [localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)) to confirm koop is running.
 
-## Additional documentation
+## Help
 
-* [Configuring a persistent PostGIS cache](docs/PG_CACHE.md)
-* [Deploying to Heroku](docs/DEPLOY_TO_HEROKU.md)
+Additional documentation is available [here](https://github.com/koopjs/koopjs.github.io/tree/master/doc).
+
+## License
+
+[Apache 2.0](LICENSE.md)
