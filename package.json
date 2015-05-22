@@ -33,7 +33,7 @@
     "koop",
     "sample"
   ],
-  "license": "ISC",
+  "license": "Apache-2.0",
   "main": "server.js",
   "private": true,
   "repository": {
