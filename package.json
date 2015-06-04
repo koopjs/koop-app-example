@@ -13,13 +13,13 @@
     "express": "^4.12.3",
     "koop": "^2.0.1",
     "koop-agol": "^0.2.0",
-    "koop-ckan": "^0.0.8",
+    "koop-ckan": "^0.0.9",
     "koop-climate": "^0.0.2",
     "koop-cloudant": "^0.0.3",
     "koop-gist": "^0.0.2",
     "koop-github": "^0.1.12",
     "koop-pgcache": "^0.1.0",
-    "koop-socrata": "^0.1.2"
+    "koop-socrata": "^0.2.0"
   },
   "homepage": "https://github.com/koopjs/koop-sample-app",
   "keywords": [
