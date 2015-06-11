@@ -1,43 +1,66 @@
 # Koop Sample App
 
-A sample [Koop](https://github.com/esri/koop) express application with some common [koop providers](https://github.com/koopjs/koopjs.github.io/blob/master/doc/providers.md).
+A sample [Koop](https://github.com/esri/koop) application with some common [providers](https://github.com/koopjs/koopjs.github.io/blob/master/docs/providers.md).
 
-This app makes it easy to get started running your own instance of Koop. It's also useful for trying out Koop's functionality, trying new Koop Providers, and testing deployments.
+This app makes it easy to get started running your own instance of Koop. It's also helpful for trying out Koop's functionality and testing providers, caches, plugins, and deployments.
 
 If you're new to [Node.js](https://nodejs.org/) development, you can read more about setting up a development environment [here](https://github.com/koopjs/koopjs.github.io/blob/master/doc/setup.md).
 
 ## Instructions
 
-1. Clone this repository on your machine.
+Clone this repository on your machine.
 
-  ```
-  git clone git@github.com:koopjs/koop-sample-app.git
-  ```
+```
+git clone git@github.com:koopjs/koop-sample-app.git
+```
 
-2. Change the working directory to the newly created `koop-sample-app` folder.
+Change the working directory to the newly created `koop-sample-app` folder.
 
-  ```
-  cd koop-sample-app
-  ```
+```
+cd koop-sample-app
+```
 
-3. Install koop's dependencies.
+Install Koop's dependencies.
 
-  ```
-  npm install
-  ```
+```
+npm install
+```
 
-4. Start the server.
+Create a `koopdev` PostgreSQL database and enable PostGIS.
 
-  ```
-  npm start
-  ```
+```
+$ createdb koopdev
+$ psql koopdev
 
-5. Take koop for a test drive!
-  You can try fetching a resource directly in the browser (such as [localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)) to confirm koop is running.
+koopdev=# CREATE EXTENSION postgis;
+CREATE EXTENSION
+koopdev=# CREATE EXTENSION postgis_topology;
+CREATE EXTENSION
+koopdev=# CREATE EXTENSION fuzzystrmatch;
+CREATE EXTENSION
+koopdev=# CREATE EXTENSION postgis_tiger_geocoder;
+CREATE EXTENSION
+```
 
-## Help
+Start the server.
 
-Additional documentation is available [here](https://github.com/koopjs/koopjs.github.io/tree/master/doc).
+```
+npm start
+```
+
+Take Koop for a test drive!
+
+You can try fetching a resource directly in the browser (such as [localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)) to confirm koop is running.
+
+## Resources
+
+* [Koop](https://github.com/Esri/koop)
+* [Koop Documentation](https://github.com/koopjs/koopjs.github.io/tree/master/docs)
+* [PostgreSQL](http://www.postgresql.org/)
+* [PostGIS](http://postgis.net/)
+* [ArcGIS for Developers](http://developers.arcgis.com)
+* [ArcGIS REST API Documentation](http://resources.arcgis.com/en/help/arcgis-rest-api/)
+* [@esri](http://twitter.com/esri)
 
 ## License
 
