@@ -1,18 +1,15 @@
-var express = require('express');
 var cors = require('cors');
 var config = require('config');
 var koop = require('koop')(config);
+var pgCache = require('koop-pgcache');
 var socrata = require('koop-socrata');
 var ckan = require('koop-ckan');
 var github = require('koop-github');
 var agol = require('koop-agol');
 var gist = require('koop-gist');
 var path = require('path');
-var app = express();
+var app = require('express')();
 var server;
-var pgCache = require('koop-pgcache');
-
-koop.registerCache(pgCache);
 
 // use HTTPS if it's included in the configuration
 if (config.https_server &&
@@ -29,6 +26,9 @@ if (config.https_server &&
   var http = require('http');
 }
 
+// register PostGIS cache
+koop.registerCache(pgCache);
+
 // register koop providers
 koop.register(socrata);
 koop.register(ckan);
@@ -36,7 +36,7 @@ koop.register(github);
 koop.register(gist);
 koop.register(agol);
 
-app.set('port', process.env.PORT || config.server.port || 3000);
+app.set('port', process.env.PORT || config.server.port || 1337);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
