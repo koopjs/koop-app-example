@@ -41,6 +41,12 @@ CREATE EXTENSION
 koopdev=# CREATE EXTENSION postgis_tiger_geocoder;
 CREATE EXTENSION
 ```
+If using Windows, you can install PostgreSQL from the [EnterpriseDB download] (http://www.enterprisedb.com/products-services-training/pgdownload), and install PostGIS by running StackBuilder at the end of the Install. Choose the option to create a new DB with the PostGIS Install, and note the name of the DB in your config file.
+In the config file, you may need to explicitly provide a user/pw such as
+
+```"conn": "postgres://postgres:<pw>@localhost/koopdev"```
+
+
 
 Start the server.
 
