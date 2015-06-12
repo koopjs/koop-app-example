@@ -10,11 +10,9 @@ var gist = require('koop-gist');
 var path = require('path');
 var app = express();
 var server;
+var pgCache = require('koop-pgcache');
 
-// In production, in-memory cache storage is not recommended.
-// We recommend using PostGIS as the cache engine.
-// var pgCache = require('koop-pgcache');
-// koop.registerCache(pgCache);
+koop.registerCache(pgCache);
 
 // use HTTPS if it's included in the configuration
 if (config.https_server &&
