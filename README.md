@@ -57,6 +57,13 @@ npm start
 
 Take Koop for a test drive!
 
+This sample app includes the following providers:
+
+* [`koop-agol`](https://github.com/koopjs/koop-agol)
+* [`koop-gist`](https://github.com/koopjs/koop-gist)
+* [`koop-github`](https://github.com/koopjs/koop-github)
+* [`koop-socrata`](https://github.com/koopjs/koop-socrata)
+
 You can try fetching a resource directly in the browser (such as [localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)) to confirm koop is running.
 
 ## Resources

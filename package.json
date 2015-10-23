@@ -1,25 +1,29 @@
 {
   "name": "koop-sample-app",
-  "description": "A sample koop express application with some common koop providers.",
-  "version": "1.0.3",
-  "author": "Chris Helm",
+  "description": "Sample koop express application with some common koop providers.",
+  "version": "0.0.0",
+  "author": "Esri R&D",
   "bugs": {
     "url": "https://github.com/koopjs/koop-sample-app/issues"
   },
   "dependencies": {
-    "config": "^1.13.0",
+    "config": "^1.16.0",
     "cors": "^2.5.3",
-    "ejs": "^2.3.1",
-    "express": "^4.12.3",
+    "ejs": "^2.3.4",
+    "errorhandler": "^1.4.2",
+    "express": "^4.12.4",
     "koop": "^2.0.0",
     "koop-agol": "^1.0.0",
-    "koop-ckan": "^0.0.9",
-    "koop-climate": "^0.0.2",
-    "koop-cloudant": "^0.0.3",
-    "koop-gist": "^1.0.0",
-    "koop-github": "^1.0.0",
+    "koop-gist": "^2.0.0",
+    "koop-github": "^2.0.0",
     "koop-pgcache": "^1.0.0",
-    "koop-socrata": "^1.0.0"
+    "koop-socrata": "^1.0.0",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "standard": "^5.3.1",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.2"
   },
   "homepage": "https://github.com/koopjs/koop-sample-app",
   "keywords": [
@@ -29,19 +33,23 @@
     "example",
     "geojson",
     "gis",
+    "gist",
+    "github",
     "heroku",
     "koop",
-    "sample"
+    "postgres",
+    "sample",
+    "socrata"
   ],
   "license": "Apache-2.0",
-  "main": "server.js",
+  "main": "index.js",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com:koopjs/koop-sample-app.git"
   },
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "standard && tape test/*.js | tap-spec"
   }
 }

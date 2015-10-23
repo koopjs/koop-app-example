@@ -19,7 +19,7 @@
       <h2> Koop <small>v<%= status.version %></small></h2>
     </div>
 
-    <p class="lead">Koop takes data from providers like ArcGIS Online, CKAN, Socrata, and Github, and serves it as <a href="http://geojson.org">GeoJSON</a> and <a href="http://maps.esri.com/apl4/sdk/rest/featureserver.html">Feature Services</a>.</p>
+    <p class="lead">Koop takes data from providers like ArcGIS Online, Socrata, and Github, and serves it as <a href="http://geojson.org">GeoJSON</a> and <a href="http://maps.esri.com/apl4/sdk/rest/featureserver.html">Feature Services</a>.</p>
 
     <p class="lead">This allows users to query, map, or analyze data from many different sources using the Feature Service API and to easily download that data as GeoJSON.</p>
 
@@ -27,17 +27,17 @@
 
     <hr>
 
-    <h4>Gists</h4>
+    <h4><a href="/gist">Gist</a></h4>
 
     <p>Gists are accessed by adding the id to <code>/gist/:gist_id</code>, and optionally the Feature Service metadata or query. For example:</p>
 
     <ul>
-      <li>Raw GeoJSON: <a href="/gist/6021269/">/gist/6021269</a></li>
-      <li>FeatureService: <a href="/gist/6021269/FeatureServer/0">/gist/6021269/FeatureServer/0</a></li>
-      <li>Query: <a href="/gist/6021269/FeatureServer/0/query">/gist/6021269/FeatureServer/0/query</a></li>
+      <li>Raw GeoJSON: <a href="/gist/e5c38eee056927975660/">/gist/e5c38eee056927975660</a></li>
+      <li>FeatureService: <a href="/gist/e5c38eee056927975660/FeatureServer/0">/gist/e5c38eee056927975660/FeatureServer/0</a></li>
+      <li>Query: <a href="/gist/e5c38eee056927975660/FeatureServer/0/query">/gist/e5c38eee056927975660/FeatureServer/0/query</a></li>
     </ul>
 
-    <h4>Github</h5>
+    <h4><a href="/github">Github</a></h5>
 
     <p>Files from Github are accessed with the following pattern: <code>http://:hostname/github/:username/:repository/:path</code></p>
 
@@ -47,6 +47,13 @@
       <li>Query: <a href="/github/chelm/grunt-geo/forks/FeatureServer/0/query">/github/chelm/grunt-geo/forks/FeatureServer/0/query</a></li>
       <strong>NOTE</strong>: <code>path</code> parameter uses "::" as the sub-directory seperator. So for example if the file is at <code>github.com/chelm/grunt-geo/tree/master/samples/bower.geojson</code> then the Koop path would look like:
         <a href="/github/chelm/grunt-geo/samples::bower">/github/chelm/grunt-geo/samples::bower</a>
+    </ul>
+
+    <h4>See also:</h4>
+
+    <ul>
+      <li><a href="/agol">ArcGIS Online</a></li>
+      <li><a href="/socrata">Socrata</a></li>
     </ul>
 
     <h3>Previews</h3>
@@ -63,7 +70,7 @@
     <h4>Try it out!</h4>
 
     <div class="input-group">
-      <input type="text" id="gist" class="form-control" value="6178185" placeholder="Enter a gist id">
+      <input type="text" id="gist" class="form-control" value="e5c38eee056927975660" placeholder="Enter a gist id">
       <span class="input-group-btn">
         <button class="btn btn-primary" onClick="submitGist()">Map Gist</button>
       </span>
@@ -105,7 +112,7 @@
           <div class="accordion-inner">
             * the params is specific to koop and is not part of the FeatureService spec
             specifies what field to use as the ObjectID field
-            <ul><li><a href="/gist/6021269/FeatureServer/0/query?idField=id">/geojson/snow/FeatureServer/0/query?idField=id</a></li></ul>
+            <ul><li><a href="/gist/e5c38eee056927975660/FeatureServer/0/query?idField=id">/geojson/snow/FeatureServer/0/query?idField=id</a></li></ul>
           </div>
         </div>
       </div>
@@ -116,7 +123,7 @@
         <div id="collapse_objectid" class="accordion-body collapse">
           <div class="accordion-inner">
             returns only the features that match a given objectId
-            <ul><li><a href="/gist/6021269/FeatureServer/0/query?objectIds=1,2,3">/geojson/snow/FeatureServer/0/query?objectIds=1,2,3</a></li></ul>
+            <ul><li><a href="/gist/e5c38eee056927975660/FeatureServer/0/query?objectIds=1,2,3">/geojson/snow/FeatureServer/0/query?objectIds=1,2,3</a></li></ul>
           </div>
         </div>
       </div>
@@ -127,7 +134,7 @@
         <div id="collapse_returncountonly" class="accordion-body collapse">
           <div class="accordion-inner">
             if true, returns only the count of features that would be returned based on other query params
-            <ul><li><a href="/gist/6021269/FeatureServer/0/query?returnCountOnly=true">/geojson/snow/FeatureServer/0/query?returnCountOnly=true</a></li></ul>
+            <ul><li><a href="/gist/e5c38eee056927975660/FeatureServer/0/query?returnCountOnly=true">/geojson/snow/FeatureServer/0/query?returnCountOnly=true</a></li></ul>
           </div>
         </div>
       </div>
@@ -138,7 +145,7 @@
         <div id="collapse_returnidsonly" class="accordion-body collapse">
           <div class="accordion-inner">
             returns only the Ids of the feature that would be returned based on other params
-            <ul><li><a href="/gist/6021269/FeatureServer/0/query?returnIdsOnly=true">/geojson/snow/FeatureServer/0/query?returnIdsOnly=true</a></li></ul>
+            <ul><li><a href="/gist/e5c38eee056927975660/FeatureServer/0/query?returnIdsOnly=true">/geojson/snow/FeatureServer/0/query?returnIdsOnly=true</a></li></ul>
           </div>
         </div>
       </div>
@@ -151,7 +158,7 @@
         <div id="collapse_geometry" class="accordion-body collapse">
           <div class="accordion-inner">
             sets a geometry filter and returns only features that are within the given geometry
-            <ul><li><a href="/gist/6021269/FeatureServer/0/query?geometry=-110,30,-106,50">/geojson/snow/FeatureServer/0/query?geometry=-110,30,-106,50</a></li></ul>
+            <ul><li><a href="/gist/e5c38eee056927975660/FeatureServer/0/query?geometry=-110,30,-106,50">/geojson/snow/FeatureServer/0/query?geometry=-110,30,-106,50</a></li></ul>
           </div>
         </div>
       </div>
