@@ -49,7 +49,7 @@
     "url": "https://github.com:koopjs/koop-sample-app.git"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "standard && tape test/*.js | tap-spec"
   }
 }
