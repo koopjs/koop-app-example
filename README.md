@@ -68,7 +68,7 @@ You can try fetching a resource directly in the browser (such as [localhost:1337
 
 ## Heroku
 
-Information about deploying this sample can be found [here](./HEROKU).
+Information about deploying this sample can be found [here](./HEROKU.md).
 
 ## Resources
 
