@@ -66,6 +66,10 @@ This sample app includes the following providers:
 
 You can try fetching a resource directly in the browser (such as [localhost:1337/github/benbalter/dc-wifi-social/bars/](http://localhost:1337/github/benbalter/dc-wifi-social/bars/)) to confirm koop is running.
 
+## Heroku
+
+Information about deploying this sample can be found [here](./HEROKU).
+
 ## Resources
 
 * [Koop](https://github.com/koopjs/koop)
