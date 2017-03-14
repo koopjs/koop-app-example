@@ -7,21 +7,16 @@
     "url": "https://github.com/koopjs/koop-sample-app/issues"
   },
   "dependencies": {
-    "config": "^1.16.0",
-    "cors": "^2.5.3",
-    "ejs": "^2.3.4",
-    "errorhandler": "^1.4.2",
-    "express": "^4.12.4",
-    "koop": "^2.0.0",
-    "koop-agol": "^1.0.0",
+    "config": "^1.25.1",
+    "koop": "^3.5.0",
+    "koop-agol": "^3.14.4",
+    "koop-craigslist": "^2.0.0",
     "koop-gist": "^2.0.0",
-    "koop-github": "^2.0.0",
-    "koop-pgcache": "^1.0.0",
-    "koop-socrata": "^1.0.0",
-    "morgan": "^1.6.1"
+    "koop-trimet": "^2.0.0",
+    "koop-zillow": "^1.0.0"
   },
   "devDependencies": {
-    "standard": "^5.3.1",
+    "standard": "^9.0.1",
     "tap-spec": "^4.1.0",
     "tape": "^4.2.2"
   },
