@@ -3,11 +3,5 @@
   "description": "Boilerplate Koop app suitable for deployment to Heroku",
   "repository": "https://github.com/koopjs/koop-sample-app",
   "logo": "https://avatars1.githubusercontent.com/u/11509517",
-  "keywords": ["node", "express", "static"],
-  "env": {
-    "KOOP_SERVER_PORT": {
-      "description": "port on which to listen for http traffic",
-      "value": "80"
-    }
-  }
+  "keywords": ["node", "express", "static"]
 }
