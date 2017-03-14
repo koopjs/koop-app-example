@@ -16,7 +16,15 @@ koop.register(trimet)
 
 // This is how you implement additional arbitrary routes on the Koop server
 koop.server.get('/', function (req, res) {
-  res.render('index', { status: koop.status })
+  res.status(200).send(`
+Welcome to Koop!
+
+Installed Providers:
+ArcGIS Online
+Zillow
+Craigslist
+Portland TriMet
+`
 })
 
 const port = config.port || 8080
