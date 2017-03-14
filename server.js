@@ -3,10 +3,10 @@ const Koop = require('koop')
 const koop = new Koop(config)
 
 // providers
-const agol = require('koop-agol')
-const zillow = require('koop-zillow')
-const craigslist = require('koop-craigslist')
-const trimet = require('koop-trimet')
+const agol = require('koop-provider-agol')
+const zillow = require('koop-provider-zillow')
+const craigslist = require('koop-provider-craigslist')
+const trimet = require('koop-provider-trimet')
 
 // register koop providers
 koop.register(agol)

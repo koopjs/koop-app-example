@@ -9,11 +9,10 @@
   "dependencies": {
     "config": "^1.25.1",
     "koop": "^3.5.0",
-    "koop-agol": "^3.14.4",
-    "koop-craigslist": "^2.0.0",
-    "koop-gist": "^2.0.0",
-    "koop-trimet": "^2.0.0",
-    "koop-zillow": "^1.0.0"
+    "koop-provider-agol": "^3.14.4",
+    "koop-provider-craigslist": "^2.0.0",
+    "koop-provider-trimet": "^2.0.1",
+    "koop-provider-zillow": "^1.0.0"
   },
   "devDependencies": {
     "standard": "^9.0.1",
