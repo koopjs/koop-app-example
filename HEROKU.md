@@ -2,8 +2,6 @@
 
 If you're short on time: [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/koopjs/koop-sample-app/tree/heroku)
 
-From [Heroku Dev Center - Extensions, PostGIS...](https://devcenter.heroku.com/articles/heroku-postgres-extensions-postgis-full-text-search#postgis) (accessed on 3/23/2016):
-
 ## Resources
 
 * [Koop](https://github.com/koopjs/koop)
