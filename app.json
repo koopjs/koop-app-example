@@ -7,7 +7,7 @@
   "env": {
     "KOOP_SERVER_PORT": {
       "description": "port on which to listen for http traffic",
-      "value": 80
+      "value": "80"
     }
   }
 }
