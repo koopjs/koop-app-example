@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/koopjs/koop-sample-app.svg?branch=master)](https://travis-ci.org/koopjs/koop-sample-app)
 # Koop Sample App
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/koopjs/koop-sample-app.svg)](https://greenkeeper.io/)
+
 A sample [Koop](https://github.com/koopjs/koop) application with some common [providers](https://koopjs.github.io/docs/providers).
 
 This app makes it easy to get started running your own instance of Koop. It's also helpful for trying out Koop's functionality and testing providers, caches, plugins, and deployments.
