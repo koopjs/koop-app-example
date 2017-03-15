@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/koopjs/koop-sample-app.svg?branch=master)](https://travis-ci.org/koopjs/koop-sample-app)
 # Koop Sample App
 
 A sample [Koop](https://github.com/koopjs/koop) application with some common [providers](https://koopjs.github.io/docs/providers).
