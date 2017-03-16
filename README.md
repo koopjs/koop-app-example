@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/koopjs/koop-sample-app.svg?branch=master)](https://travis-ci.org/koopjs/koop-sample-app)
-# Koop Sample App
 
+# Koop Sample App
+[![Build Status](https://travis-ci.org/koopjs/koop-sample-app.svg?branch=master)](https://travis-ci.org/koopjs/koop-sample-app)
 [![Greenkeeper badge](https://badges.greenkeeper.io/koopjs/koop-sample-app.svg)](https://greenkeeper.io/)
 
 A sample [Koop](https://github.com/koopjs/koop) application with some common [providers](https://koopjs.github.io/docs/providers).
