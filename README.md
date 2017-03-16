@@ -51,7 +51,7 @@ This sample app includes the following providers:
 
 ### Now
 1. Install [Now](https://zeit.co/now)
-2. run `now -e KOOP_SERVER_PORT=80`
+2. run `now -e PORT=80`
 
 ## Resources
 
