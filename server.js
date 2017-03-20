@@ -6,7 +6,7 @@ const koop = new Koop(config)
 const agol = require('koop-provider-agol')
 const zillow = require('koop-provider-zillow')
 const craigslist = require('koop-provider-craigslist')
-const trimet = require('koop-provider-trimet')
+// const trimet = require('koop-provider-trimet')
 
 // register koop providers
 koop.register(agol)
