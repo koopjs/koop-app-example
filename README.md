@@ -40,9 +40,18 @@ Take Koop for a test drive!
 This sample app includes the following providers:
 
 * [`agol`](https://github.com/koopjs/koop-provider-agol)
-* [`trimet`](https://github.com/koopjs/koop-provider-trimet)
 * [`zillow`](https://github.com/koopjs/koop-provider-zillow)
 * [`craigslist`](https://github.com/dmfenton/koop-provider-craigslist)
+
+Optional:
+
+To configure the provider below:
+
+* [`trimet`](https://github.com/koopjs/koop-provider-trimet)
+
+1. sign up for a [developer key](https://developer.trimet.org/appid/registration/)
+2. reference it in `/koop-provider-trimet/config/default.json`
+3. copy/paste the file into `/koop-sample-app/config/`
 
 ## Deploying
 

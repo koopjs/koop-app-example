@@ -6,13 +6,13 @@ const koop = new Koop(config)
 const agol = require('koop-provider-agol')
 const zillow = require('koop-provider-zillow')
 const craigslist = require('koop-provider-craigslist')
-const trimet = require('koop-provider-trimet')
+// const trimet = require('koop-provider-trimet')
 
 // register koop providers
 koop.register(agol)
 koop.register(zillow)
 koop.register(craigslist)
-koop.register(trimet)
+// koop.register(trimet)
 
 // This is how you implement additional arbitrary routes on the Koop server
 koop.server.get('/', function (req, res) {
@@ -23,7 +23,8 @@ Installed Providers:
 ArcGIS Online
 Zillow
 Craigslist
-Portland TriMet
+
+Portland TriMet isn't configured (yet)
 `)
 })
 
