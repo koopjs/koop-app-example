@@ -40,7 +40,7 @@ Take Koop for a test drive!
 This sample app includes the following providers:
 
 * [`agol`](https://github.com/koopjs/koop-provider-agol)
-* [`zillow`](https://github.com/koopjs/koop-provider-zillow)
+* [`zillow`](https://github.com/dmfenton/koop-provider-zillow)
 * [`craigslist`](https://github.com/dmfenton/koop-provider-craigslist)
 
 Optional:
