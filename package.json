@@ -7,12 +7,10 @@
     "url": "https://github.com/koopjs/koop-sample-app/issues"
   },
   "dependencies": {
-    "config": "^1.25.1",
-    "koop": "^3.5.0",
-    "koop-provider-agol": "^3.14.4",
-    "koop-provider-craigslist": "^2.0.0",
-    "koop-provider-trimet": "^2.0.1",
-    "koop-provider-zillow": "^1.0.0"
+    "@koopjs/provider-github": "^3.0.0",
+    "config": "^2.0.1",
+    "koop": "^3.10.0",
+    "koop-provider-craigslist": "^2.0.0"
   },
   "devDependencies": {
     "standard": "^10.0.1",

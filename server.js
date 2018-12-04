@@ -3,16 +3,12 @@ const Koop = require('koop')
 const koop = new Koop(config)
 
 // providers
-const agol = require('koop-provider-agol')
-const zillow = require('koop-provider-zillow')
+const github = require('@koopjs/provider-github')
 const craigslist = require('koop-provider-craigslist')
-// const trimet = require('koop-provider-trimet')
 
 // register koop providers
-koop.register(agol)
-koop.register(zillow)
+koop.register(github)
 koop.register(craigslist)
-// koop.register(trimet)
 
 // This is how you implement additional arbitrary routes on the Koop server
 koop.server.get('/', function (req, res) {
@@ -20,11 +16,9 @@ koop.server.get('/', function (req, res) {
 Welcome to Koop!
 
 Installed Providers:
-ArcGIS Online
-Zillow
+Github
 Craigslist
 
-Portland TriMet isn't configured (yet)
 `)
 })
 
