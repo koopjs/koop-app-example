@@ -39,19 +39,14 @@ Take Koop for a test drive!
 
 This sample app includes the following providers:
 
-* [`agol`](https://github.com/koopjs/koop-provider-agol)
-* [`zillow`](https://github.com/dmfenton/koop-provider-zillow)
+* [`github`](https://github.com/koopjs/koop-provider-github)
 * [`craigslist`](https://github.com/dmfenton/koop-provider-craigslist)
 
-Optional:
+Once Koop is running, you can test these sample requests:
 
-To configure the provider below:
+* [http://localhost:8080/github/koopjs::geodata::north-america/FeatureServer/0/query](http://localhost:8080/github/koopjs::geodata::north-america/FeatureServer/0/query)
+* [http://localhost:8080/craigslist/seattle/apartments/FeatureServer/0/query](http://localhost:8080/craigslist/seattle/apartments/FeatureServer/0/query)
 
-* [`trimet`](https://github.com/koopjs/koop-provider-trimet)
-
-1. sign up for a [developer key](https://developer.trimet.org/appid/registration/)
-2. reference it in `/koop-provider-trimet/config/default.json`
-3. copy/paste the file into `/koop-sample-app/config/`
 
 ## Deploying
 
