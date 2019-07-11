@@ -13,7 +13,7 @@
     "koop-provider-craigslist": "^2.0.0"
   },
   "devDependencies": {
-    "standard": "^11.0.0",
+    "standard": "^13.0.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.2.2"
   },
