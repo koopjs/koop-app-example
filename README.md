@@ -1,7 +1,7 @@
 
 # Koop Sample App
-[![Build Status](https://travis-ci.org/koopjs/koop-sample-app.svg?branch=master)](https://travis-ci.org/koopjs/koop-sample-app)
-[![Greenkeeper badge](https://badges.greenkeeper.io/koopjs/koop-sample-app.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/koopjs/koop-app-example.svg?branch=master)](https://travis-ci.org/koopjs/koop-app-example)
+[![Greenkeeper badge](https://badges.greenkeeper.io/koopjs/koop-app-example.svg)](https://greenkeeper.io/)
 
 A sample [Koop](https://github.com/koopjs/koop) application with some common [providers](https://koopjs.github.io/docs/providers).
 
@@ -14,13 +14,13 @@ If you're new to [Node.js](https://nodejs.org/) development, you can read more a
 Clone this repository on your machine.
 
 ```
-git clone git@github.com:koopjs/koop-sample-app.git
+git clone git@github.com:koopjs/koop-app-example.git
 ```
 
-Change the working directory to the newly created `koop-sample-app` folder.
+Change the working directory to the newly created `koop-app-example` folder.
 
 ```
-cd koop-sample-app
+cd koop-app-example
 ```
 
 Install dependencies.
