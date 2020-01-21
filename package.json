@@ -1,21 +1,22 @@
 {
   "name": "koop-sample-app",
   "description": "Sample koop express application with some common koop providers.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Esri R&D",
   "bugs": {
     "url": "https://github.com/koopjs/koop-sample-app/issues"
   },
   "dependencies": {
     "@koopjs/provider-github": "^3.0.0",
-    "config": "^3.0.1",
-    "koop": "^3.10.0",
-    "koop-provider-craigslist": "^2.0.0"
+    "config": "^3.2.5",
+    "koop": "^3.17.0",
+    "koop-provider-craigslist": "^2.0.1"
   },
   "devDependencies": {
-    "standard": "^11.0.0",
+    "@koopjs/cli": "^0.6.0",
+    "standard": "^14.3.1",
     "tap-spec": "^5.0.0",
-    "tape": "^4.2.2"
+    "tape": "^4.13.0"
   },
   "homepage": "https://github.com/koopjs/koop-sample-app",
   "keywords": [
@@ -34,14 +35,15 @@
     "socrata"
   ],
   "license": "Apache-2.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com:koopjs/koop-sample-app.git"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/index.js",
+    "start:dev": "koop serve --save --watch",
     "test": "standard && tape test/*.js | tap-spec"
   }
 }

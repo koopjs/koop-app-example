@@ -47,16 +47,6 @@ Once Koop is running, you can test these sample requests:
 * [http://localhost:8080/github/koopjs::geodata::north-america/FeatureServer/0/query](http://localhost:8080/github/koopjs::geodata::north-america/FeatureServer/0/query)
 * [http://localhost:8080/craigslist/seattle/apartments/FeatureServer/0/query](http://localhost:8080/craigslist/seattle/apartments/FeatureServer/0/query)
 
-
-## Deploying
-
-### Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/koopjs/koop-sample-app)
-
-### Now
-1. Install [Now](https://zeit.co/now)
-2. run `now -e PORT=80`
-
 ## Resources
 
 * [Koop](https://github.com/koopjs/koop)
