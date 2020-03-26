@@ -9,7 +9,7 @@
   "dependencies": {
     "@koopjs/provider-github": "^3.0.0",
     "config": "^3.2.5",
-    "koop": "^3.17.0",
+    "koop": "^3.17.2",
     "koop-provider-craigslist": "^2.0.1"
   },
   "devDependencies": {
