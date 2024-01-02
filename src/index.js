@@ -1,5 +1,5 @@
 const config = require('config')
-const Koop = require('koop')
+const Koop = require('@koopjs/koop-core')
 const routes = require('./routes')
 const plugins = require('./plugins')
 
