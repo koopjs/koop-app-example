@@ -1,15 +1,15 @@
 {
   "name": "koop-app-example",
   "description": "Sample koop express application with some common koop providers.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Esri R&D",
   "bugs": {
     "url": "https://github.com/koopjs/koop-app-example/issues"
   },
   "dependencies": {
+    "@koopjs/koop-core": "^10.1.0",
     "@koopjs/provider-github": "^3.0.0",
     "config": "^3.2.5",
-    "koop": "^3.17.0",
     "koop-provider-craigslist": "^2.0.1"
   },
   "devDependencies": {
